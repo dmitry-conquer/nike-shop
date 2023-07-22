@@ -6,7 +6,7 @@
       <div class="red-sqr-inner absolute left-0 top-0 h-full w-full"></div>
       <img
         id="on-red-cross"
-        src="images/cross14.png"
+        src="~/assets/images/cross14.png"
         alt="cross14"
         class="absolute left-4 top-[40%] sm:top-1/2 w-[300px] -translate-y-1/2 rotate-[10deg] will-change-transform" />
     </div>

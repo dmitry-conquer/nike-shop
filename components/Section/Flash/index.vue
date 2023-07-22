@@ -1,8 +1,8 @@
 <template>
   <section class="">
-    <div class="mx-auto flex max-w-[1440px]">
+    <div class="mx-auto flex max-w-[1440px] flex-col sm:flex-row">
       <h2 class="sr-only">Flash collection</h2>
-      <div class="flex w-1/3 items-center justify-center gap-12">
+      <div class="flex justify-between px-4 mb-8 items-center gap-12 md:w-1/3 md:justify-center">
         <button
           @click="slider.slidePrev()"
           class="flex items-center gap-3 transition hover:text-brand-400"
@@ -19,7 +19,7 @@
         </button>
       </div>
       <ClientOnly>
-        <div class="-mt-8 w-2/3 overflow-hidden px-4 pt-8">
+        <div class="-mt-8 overflow-hidden px-4 pt-8 md:w-2/3">
           <Swiper
             @swiper="onSwiper"
             :modules="[SwiperNavigation, SwiperAutoplay]"
@@ -37,12 +37,12 @@
               v-for="item in items"
               :key="item.name"
               class="!h-auto">
-              <article class="flex h-full flex-col border-2 pb-7 pl-4 pr-8">
+              <article class="flex h-full flex-col border-2 pb-3 pl-4 pr-8 md:pb-7">
                 <img
                   :src="item.image"
                   :alt="item.name"
-                  class="-translate-y-[15%]" />
-                <h3>{{ item.name }}</h3>
+                  class="h-24 -translate-y-[15%] object-contain" />
+                <h3 class="md:text-medium truncate whitespace-nowrap text-sm">{{ item.name }}</h3>
               </article>
             </SwiperSlide>
           </Swiper>
@@ -60,42 +60,46 @@ const onSwiper = swiper => {
 };
 
 const breakpointsOptions = {
-  575: {},
+  320: {
+    slidesPerView: 1.5,
+    spaceBetween: 25,
+  },
+  575: {
+    slidesPerView: 1.8,
+  },
   768: {
-    slidesPerView: 2.3
+    slidesPerView: 2.3,
   },
-  1024: {
-   
-  },
+  1024: {},
   1280: {
-    slidesPerView: 3
+    slidesPerView: 3,
   },
 };
 
 const items = [
   {
     name: "Nike Cosmic Unity 2",
-    image: "images/cross1.png",
+    image: "/_nuxt/assets/images/cross1.png",
   },
   {
     name: "NIKE SB Dunk High",
-    image: "images/cross2.png",
+    image: "/_nuxt/assets/images/cross2.png",
   },
   {
     name: "NIKE UNO Dunk low",
-    image: "images/cross3.png",
+    image: "/_nuxt/assets/images/cross3.png",
   },
   {
     name: "NIKE VULKANO Inf",
-    image: "images/cross4.png",
+    image: "/_nuxt/assets/images/cross4.png",
   },
   {
     name: "NIKE Lorex Extra",
-    image: "images/cross5.png",
+    image: "/_nuxt/assets/images/cross5.png",
   },
   {
     name: "NIKE SB Dino",
-    image: "images/cross6.png",
+    image: "/_nuxt/assets/images/cross6.png",
   },
 ];
 </script>

@@ -4,7 +4,7 @@
       <img
         :style="parallaxStyles"
         ref="targetParallax"
-        src="images/circle-picture.png"
+        src="~/assets/images/circle-picture.png"
         alt="circle-picture"
         class="block object-cover w-full h-full transition-all ease-linear" />
     </div>

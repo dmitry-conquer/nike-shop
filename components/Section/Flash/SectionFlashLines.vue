@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative z-20 translate-y-10 rotate-[3deg] bg-black">
+    <div class="relative z-20 translate-y-16 sm:translate-y-10 rotate-[3deg] bg-black">
       <div
         id="black-line"
         class="flex gap-24 lg:gap-48">

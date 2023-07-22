@@ -3,28 +3,28 @@
     <div class="relative mx-auto mb-12 max-w-[38rem] text-center text-4xl font-bold uppercase leading-normal">
       <h2
         data-text="BEST SELLERS"
-        class="text-clip-sm text-2xl sm:text-3xl lg:text-4xl text-clip text-white leading-tight">
+        class="text-clip-sm text-clip text-2xl leading-tight text-white sm:text-3xl lg:text-4xl">
         BEST SELLERS
       </h2>
     </div>
     <div class="grid grid-cols-1 justify-center justify-items-center gap-10 md:grid-cols-2 lg:grid-cols-3">
-      <div class="relative overflow-hidden">
+      <div class="relative overflow-hidden max-sm:w-[80%]">
         <img
-          src="images/women.jpg"
+          src="~/assets/images/women.jpg"
           alt="women"
           class="relative -z-0" />
         <h3 class="text-stroke absolute bottom-2 right-2 text-4xl uppercase italic leading-none">women</h3>
       </div>
-      <div class="relative overflow-hidden">
+      <div class="relative overflow-hidden max-sm:w-[80%]">
         <img
-          src="images/kids.jpg"
+          src="~/assets/images/kids.jpg"
           alt="kids"
           class="relative -z-0" />
         <h3 class="text-stroke absolute bottom-2 right-2 text-4xl uppercase italic leading-none">kids</h3>
       </div>
-      <div class="relative overflow-hidden">
+      <div class="relative overflow-hidden max-sm:w-[80%]">
         <img
-          src="images/men.jpg"
+          src="~/assets/images/men.jpg"
           alt="men"
           class="relative -z-0" />
         <h3 class="text-stroke absolute bottom-2 right-2 text-4xl uppercase italic leading-none">men</h3>
@@ -32,28 +32,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-onMounted(() => {
-  const {gsap} = useGsap();
-
-  const textStroke = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".text-stroke",
-      start: "top 70%",
-      end: "bottom 20%",
-      scrub: true,
-    },
-  });
-  textStroke.fromTo(
-    ".text-stroke",
-    {
-      x: 300,
-    },
-    {
-      x: 0,
-      stagger: 0.3
-    },
-  );
-});
-</script>

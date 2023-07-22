@@ -3,7 +3,7 @@
     class="relative mx-auto flex max-w-[2000px] flex-col items-center justify-center gap-32 overflow-hidden px-4 py-40 max-md:py-20 md:flex-row md:pr-12 lg:pl-8 xl:pl-16">
     <h1 class="sr-only">Nike Shop</h1>
     <img
-      src="images/vector1.png"
+      src="~/assets/images/vector1.png"
       alt="vector"
       class="pointer-events-none absolute left-0 top-0 h-full w-full max-sm:hidden" />
     <p
@@ -12,7 +12,7 @@
       AIR JORDAN 1 RETRO HIGH OG DUNK HIGH
     </p>
     <div
-      class="absolute -left-[49rem] top-[20%] z-50 -translate-y-1/2 translate-x-full max-sm:-left-[28rem] md:top-1/2 lg:-left-[65rem]">
+      class="absolute -left-[49rem] top-[20%] z-50 -translate-y-1/2 translate-x-full max-sm:-left-[32rem] md:top-1/2 lg:-left-[65rem]">
       <div
         ref="colorscircle"
         class="h-[20rem] w-[20rem] rounded-full border transition duration-500 sm:h-[30rem] sm:w-[30rem] lg:h-[40rem] lg:w-[40rem]">
@@ -28,7 +28,7 @@
     <div
       id="cross-selector"
       ref="cross"
-      class="relative -left-24 top-1/2 z-20 w-[18rem] shrink-0 sm:left-0 sm:h-[60%] sm:w-[60%] md:h-[8rem] md:w-[24rem] md:-translate-y-1/2 lg:h-[12rem] lg:w-[32rem] xl:h-[20rem] xl:w-[40rem]">
+      class="relative -left-8 top-1/2 z-20 w-[18rem] shrink-0 sm:left-0 sm:h-[60%] sm:w-[60%] md:h-[8rem] md:w-[24rem] md:-translate-y-1/2 lg:h-[12rem] lg:w-[32rem] xl:h-[20rem] xl:w-[40rem]">
       <Transition
         mode="out-in"
         v-for="(url, i) in sliderImagesUrl"
@@ -42,7 +42,7 @@
       <ToolTips
         text="Purposeful Design"
         position="top-left"
-        class="left-1/4 top-12 z-10 sm:top-24 md:top-16 lg:top-48" />
+        class="left-1/4 top-12 z-10 max-sm:left-[55%] sm:top-24 md:top-16 lg:top-48" />
       <ToolTips
         text="Relentless Innovation"
         position="top-left"
@@ -52,9 +52,9 @@
       <h2 class="sr-only">New collection</h2>
       <div class="flex flex-col items-start gap-y-4 px-4 max-md:max-w-md">
         <h3 class="text-2xl italic leading-none md:text-3xl">AIR JORDAN 1 RETRO HIGH OG</h3>
-        <div class="flex w-full">
+        <div class="flex w-full max-sm:justify-between">
           <span class="mr-auto text-2xl">$275</span>
-          <div class="mr-16 flex items-center gap-2">
+          <div class="flex items-center gap-2 sm:mr-16">
             <label class="font-light">Size</label>
             <select class="bg-transparent text-2xl">
               <option
@@ -72,11 +72,11 @@
 
 <script setup>
 const sliderImagesUrl = [
-  "images/cross6.png",
-  "images/cross2.png",
-  "images/cross1.png",
-  "images/cross5.png",
-  "images/cross7.png",
+  "/_nuxt/assets/images/cross6.png",
+  "/_nuxt/assets/images/cross2.png",
+  "/_nuxt/assets/images/cross1.png",
+  "/_nuxt/assets/images/cross5.png",
+  "/_nuxt/assets/images/cross7.png",
 ];
 
 const sneakers = [
@@ -136,7 +136,7 @@ const choose = (color, i) => {
  */
 
 onMounted(() => {
-  const { gsap } = useGsap();
+  const { gsap, ScrollTrigger } = useGsap();
 
   const heroBgText = gsap.timeline({
     scrollTrigger: {
@@ -151,23 +151,27 @@ onMounted(() => {
     opacity: 1,
   });
 
-  const crossSelector = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#cross-selector",
-      start: "top 25%",
-      end: "bottom top",
-      scrub: true,
+  ScrollTrigger.matchMedia({
+    "(min-width: 768px)": () => {
+      const crossSelector = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#cross-selector",
+          start: "top 25%",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+      crossSelector.fromTo(
+        "#cross-selector",
+        {
+          x: "100",
+        },
+        {
+          x: "0",
+        },
+      );
     },
   });
-  crossSelector.fromTo(
-    "#cross-selector",
-    {
-      x: "100",
-    },
-    {
-      x: "0",
-    },
-  );
 });
 </script>
 

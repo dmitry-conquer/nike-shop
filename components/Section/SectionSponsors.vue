@@ -11,14 +11,14 @@
 
 <script setup>
 const sponsors = [
-  "images/sponsores/1.png",
-  "images/sponsores/2.png",
-  "images/sponsores/3.png",
-  "images/sponsores/4.png",
-  "images/sponsores/5.png",
-  "images/sponsores/6.png",
-  "images/sponsores/7.png",
-  "images/sponsores/8.png",
+  "/_nuxt/assets/images/sponsores/1.png",
+  "/_nuxt/assets/images/sponsores/2.png",
+  "/_nuxt/assets/images/sponsores/3.png",
+  "/_nuxt/assets/images/sponsores/4.png",
+  "/_nuxt/assets/images/sponsores/5.png",
+  "/_nuxt/assets/images/sponsores/6.png",
+  "/_nuxt/assets/images/sponsores/7.png",
+  "/_nuxt/assets/images/sponsores/8.png",
 ];
 
 onMounted(() => {

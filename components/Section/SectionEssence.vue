@@ -1,5 +1,5 @@
 <template>
-  <section class="relative mb-[14.5rem] pt-[11.5rem]">
+  <section class="relative mb-[14.5rem] pt-32 sm:pt-[11.5rem]">
     <div class="mx-auto max-w-[66.5rem] px-4">
       <div class="relative mx-auto mb-10 max-w-[38rem] text-center text-4xl font-bold leading-normal lg:mb-20">
         <h2
@@ -9,12 +9,12 @@
         </h2>
         <img
           id="thumb-1"
-          src="images/title-thumb1.jpg"
+          src="~/assets/images/title-thumb1.jpg"
           alt="title-thumb1"
           class="absolute max-sm:hidden top-0 right-0 h-[4.5rem] w-[4.5rem]" />
         <img
           id="thumb-2"
-          src="images/title-thumb2.jpg"
+          src="~/assets/images/title-thumb2.jpg"
           alt="title-thumb2"
           class="absolute max-sm:hidden bottom-0 left-0 h-[4.5rem] w-[4.5rem]" />
       </div>
@@ -29,7 +29,7 @@
     <img
       id="red-cross"
       class="will-change-transform absolute sm:-bottom-[20%] -bottom-[13%] -left-[14%] -z-10 w-[60%] rotate-[35deg] object-contain xl:h-[20rem] xl:w-[42rem]"
-      src="images/cross-red.png"
+      src="~/assets/images/cross-red.png"
       alt="cross-red" />
   </section>
 </template>
