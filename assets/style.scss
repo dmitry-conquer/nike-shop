@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "mixins";
+@import "tips";
+@include font("Futura", futura-light-bt, 300, normal); // Light
+@include font("Futura", futura, 400, normal); // Normal (Regular)
+@include font("Futura", futura-medium-bt, 500, normal); // Medium
+@include font("Futura", futura-bold, 700, normal); // Bold
+@include font("Futura", futura-bold-italic-bt, 700, italic); // Bold
+@include font("Futura", futura-heavy-bt, 900, normal); // Black (Heavy)
+@include font("Futura", futura-extra-black-bt, 950, normal); // // Extra Black (Ultra Black)
+@include font("Futura", futura-extra-black-condensed-italic-bt, 950, italic); // Extra Black (Ultra Black) Italic
+
+@layer base {
+  body {
+    @apply bg-black font-futura text-base text-white;
+  }
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 600px;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+  }
+  .red-sqr {
+    border-radius: 6.9375rem;
+    background: conic-gradient(from 9deg at 46.78% 51.75%, #ba0000 0deg, #ba0000 360deg);
+    mix-blend-mode: hard-light;
+    filter: blur(75px);
+  }
+  .red-sqr-inner {
+    border-radius: 0.625rem;
+    background: rgba(255, 255, 255, 0.6);
+    mix-blend-mode: soft-light;
+  }
+  .circle-gradient {
+    border-radius: 18.25rem;
+    background: conic-gradient(from 180deg at 50% 50%, #f00 0deg, rgba(255, 0, 0, 0) 360deg);
+    background-blend-mode: luminosity;
+    filter: blur(115px);
+  }
+  .circle-gradient-lg {
+    border-radius: 26.1875rem;
+    background: conic-gradient(from 180deg at 50% 50%, #ba0000 0deg, rgba(186, 0, 0, 0.28) 360deg);
+    mix-blend-mode: hard-light;
+    filter: blur(125px);
+  }
+
+  .absolute-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+}
+
+.text-clip {
+  color: white;
+  &::before {
+    content: attr(data-text);
+    margin: 0;
+    color: #ca1111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &-lg::before {
+    clip-path: polygon(20% 0, 100% 37%, 100% 0);
+  }
+  &-sm::before {
+    clip-path: polygon(13% 0, 100% 100%, 100% 0);
+  }
+}

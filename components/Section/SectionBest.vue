@@ -1,0 +1,104 @@
+<template>
+  <div class="container flex items-center gap-10 py-32">
+    <div class="w-1/2">
+      <h2 class="text-3xl">BEST SHOES FOR THE BEST PEOPLE</h2>
+      <p class="text-md font-light leading-tight">
+        Design for the way you live your life. Atoms are beautiful in their simplicity, supporting your feet with
+        absolute comfort.
+      </p>
+    </div>
+    <div class="relative grid w-1/2 auto-rows-[10rem] grid-cols-2 gap-x-10 gap-y-6">
+      <div
+        id="image-big"
+        class="relative z-20 row-span-3 overflow-hidden rounded-2xl pb-16 will-change-transform">
+        <img
+          src="images/best1.jpg"
+          alt="image"
+          class="h-full w-full overflow-hidden rounded-2xl object-cover" />
+      </div>
+      <div
+        id="image-small"
+        class="relative z-20 overflow-hidden rounded-2xl will-change-transform">
+        <img
+          src="images/best2.jpg"
+          alt="image"
+          class="col-end-3 h-full w-full object-cover" />
+      </div>
+      <div
+        id="image-medium"
+        class="relative z-20 row-span-2 overflow-hidden rounded-2xl pl-12 pr-4 will-change-transform">
+        <img
+          src="images/best3.jpg"
+          alt="image"
+          class="h-full w-full rounded-2xl object-cover" />
+      </div>
+      <div class="circle-gradient-lg absolute-center h-[36rem] w-[36rem]"></div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+onMounted(() => {
+  const gsap = useGsap();
+
+  const imageBig = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#image-big",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+  imageBig.fromTo(
+    "#image-big",
+    {
+      x: -100,
+      opacity: 0
+    },
+    {
+      x: 0,
+      opacity: 1
+    },
+  );
+
+  const imageMedium = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#image-medium",
+      start: "top bottom",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+  imageMedium.fromTo(
+    "#image-medium",
+    {
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1
+    },
+  );
+
+  const imageSmall = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#image-small",
+      start: "top bottom",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+  imageSmall.fromTo(
+    "#image-small",
+    {
+      x: 100,
+      opacity: 0
+    },
+    {
+      x: 0,
+      opacity: 1
+    },
+  );
+});
+</script>

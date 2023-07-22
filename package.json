@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/node": "^18.16.19",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "nuxt": "^3.6.3",
+    "postcss": "^8.4.26",
+    "sass": "^1.63.6"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.19",
+    "@vueuse/core": "^10.2.1",
+    "gsap": "^3.12.2",
+    "nuxt-swiper": "^1.2.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.4.1"
+  }
+}
