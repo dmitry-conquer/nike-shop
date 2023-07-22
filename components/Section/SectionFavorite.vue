@@ -30,26 +30,32 @@
 </template>
 
 <script setup>
+import cross11 from "~/assets/images/cross11.png";
+import cross9 from "~/assets/images/cross9.png";
+import cross8 from "~/assets/images/cross8.png";
+import cross7 from "~/assets/images/cross7.png";
+
+
 const items = [
   {
     name: "NIKE Mercurial Superfly",
     price: "$271",
-    image: "/_nuxt/assets/images/cross11.png",
+    image: cross11
   },
   {
     name: "NIKE Dunk High",
     price: "$187",
-    image: "/_nuxt/assets/images/cross9.png",
+    image: cross9
   },
   {
     name: "Vans Old Skool Suede Honey Gold",
     price: "$219",
-    image: "/_nuxt/assets/images/cross8.png",
+    image: cross8
   },
   {
     name: "Air Jordan 13 Retro Court Purple (Reflective)",
     price: "$178",
-    image: "/_nuxt/assets/images/cross7.png",
+    image: cross7
   },
 ];
 
@@ -62,7 +68,7 @@ onMounted(() => {
           trigger: "#cross-row",
           start: "top 60%",
           end: "bottom top",
-          scrub: true,
+          scrub: 4,
         },
       });
       crossRow.to("#cross-row", {

@@ -2,7 +2,7 @@
   <section class="">
     <div class="mx-auto flex max-w-[1440px] flex-col sm:flex-row">
       <h2 class="sr-only">Flash collection</h2>
-      <div class="flex justify-between px-4 mb-8 items-center gap-12 md:w-1/3 md:justify-center">
+      <div class="mb-8 flex items-center justify-between gap-12 px-4 md:w-1/3 md:justify-center">
         <button
           @click="slider.slidePrev()"
           class="flex items-center gap-3 transition hover:text-brand-400"
@@ -54,6 +54,13 @@
 </template>
 
 <script setup>
+import cross1 from "~/assets/images/cross1.png";
+import cross2 from "~/assets/images/cross2.png";
+import cross3 from "~/assets/images/cross3.png";
+import cross4 from "~/assets/images/cross4.png";
+import cross5 from "~/assets/images/cross5.png";
+import cross6 from "~/assets/images/cross6.png";
+
 const slider = ref(null);
 const onSwiper = swiper => {
   slider.value = swiper;
@@ -79,27 +86,27 @@ const breakpointsOptions = {
 const items = [
   {
     name: "Nike Cosmic Unity 2",
-    image: "/_nuxt/assets/images/cross1.png",
+    image: cross1,
   },
   {
     name: "NIKE SB Dunk High",
-    image: "/_nuxt/assets/images/cross2.png",
+    image: cross2,
   },
   {
     name: "NIKE UNO Dunk low",
-    image: "/_nuxt/assets/images/cross3.png",
+    image: cross3,
   },
   {
     name: "NIKE VULKANO Inf",
-    image: "/_nuxt/assets/images/cross4.png",
+    image: cross4,
   },
   {
     name: "NIKE Lorex Extra",
-    image: "/_nuxt/assets/images/cross5.png",
+    image: cross5,
   },
   {
     name: "NIKE SB Dino",
-    image: "/_nuxt/assets/images/cross6.png",
+    image: cross6,
   },
 ];
 </script>

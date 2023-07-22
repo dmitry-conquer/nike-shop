@@ -30,7 +30,6 @@
       ref="cross"
       class="relative -left-8 top-1/2 z-20 w-[18rem] shrink-0 sm:left-0 sm:h-[60%] sm:w-[60%] md:h-[8rem] md:w-[24rem] md:-translate-y-1/2 lg:h-[12rem] lg:w-[32rem] xl:h-[20rem] xl:w-[40rem]">
       <Transition
-        mode="out-in"
         v-for="(url, i) in sliderImagesUrl"
         :key="i">
         <img
@@ -71,13 +70,12 @@
 </template>
 
 <script setup>
-const sliderImagesUrl = [
-  "/_nuxt/assets/images/cross6.png",
-  "/_nuxt/assets/images/cross2.png",
-  "/_nuxt/assets/images/cross1.png",
-  "/_nuxt/assets/images/cross5.png",
-  "/_nuxt/assets/images/cross7.png",
-];
+import cross1 from "~/assets/images/cross1.png";
+import cross2 from "~/assets/images/cross2.png";
+import cross5 from "~/assets/images/cross5.png";
+import cross6 from "~/assets/images/cross6.png";
+import cross7 from "~/assets/images/cross7.png";
+const sliderImagesUrl = [cross1, cross2, cross5, cross6, cross7];
 
 const sneakers = [
   {
