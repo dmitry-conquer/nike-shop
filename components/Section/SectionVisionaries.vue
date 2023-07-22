@@ -1,15 +1,15 @@
 <template>
-  <section class="container flex items-center justify-between gap-[15rem] py-32">
-    <div class="perspective h-[26rem] w-[26rem] shrink-0">
+  <section class="container flex flex-col-reverse lg:flex-row items-center justify-between gap-x-[15rem] gap-y-8 py-16 sm:py-32 px-4">
+    <div class="perspective  w-[88%] h-[88%] sm:h-[26rem] sm:w-[26rem] shrink-0">
       <img
         :style="parallaxStyles"
         ref="targetParallax"
         src="images/circle-picture.png"
         alt="circle-picture"
-        class="block object-cover transition-all ease-linear" />
+        class="block object-cover w-full h-full transition-all ease-linear" />
     </div>
     <div>
-      <h2 class="mb-8 whitespace-nowrap text-3xl uppercase">WE ARE <span class="text-brand-500">VISIONARIES</span></h2>
+      <h2 class="mb-8 lg:whitespace-nowrap text-2xl leading-tight sm:text-3xl text-center lg:text-left uppercase">WE ARE <span class="text-brand-500">VISIONARIES</span></h2>
       <div class="space-y-8">
         <p class="text-md font-light leading-none">
           Exploring the boundaries of footwear with expert design knowledge and manufacture in mind.

@@ -1,16 +1,16 @@
 <template>
-  <div class="container flex items-center gap-10 py-32">
-    <div class="w-1/2">
-      <h2 class="text-3xl">BEST SHOES FOR THE BEST PEOPLE</h2>
-      <p class="text-md font-light leading-tight">
+  <div class="container flex flex-col lg:flex-row items-center gap-x-10 gap-y-16 py-16 md:py-32">
+    <div class="lg:w-1/2 max-lg:space-y-4">
+      <h2 class="text-2xl sm:text-3xl lg:text-left text-center leading-tight">BEST SHOES FOR THE BEST PEOPLE</h2>
+      <p class="text-md font-light lg:text-left text-center leading-tight">
         Design for the way you live your life. Atoms are beautiful in their simplicity, supporting your feet with
         absolute comfort.
       </p>
     </div>
-    <div class="relative grid w-1/2 auto-rows-[10rem] grid-cols-2 gap-x-10 gap-y-6">
+    <div class="relative grid lg:w-1/2 auto-rows-[10rem] grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6">
       <div
         id="image-big"
-        class="relative z-20 row-span-3 overflow-hidden rounded-2xl pb-16 will-change-transform">
+        class="relative z-20 row-span-3 overflow-hidden rounded-2xl sm:pb-16 will-change-transform">
         <img
           src="images/best1.jpg"
           alt="image"
@@ -26,7 +26,7 @@
       </div>
       <div
         id="image-medium"
-        class="relative z-20 row-span-2 overflow-hidden rounded-2xl pl-12 pr-4 will-change-transform">
+        class="relative z-20 row-span-2 overflow-hidden rounded-2xl sm:pl-12 sm:pr-4 will-change-transform">
         <img
           src="images/best3.jpg"
           alt="image"
@@ -39,7 +39,7 @@
 
 <script setup>
 onMounted(() => {
-  const gsap = useGsap();
+  const {gsap} = useGsap();
 
   const imageBig = gsap.timeline({
     scrollTrigger: {

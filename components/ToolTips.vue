@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute  -translate-x-1/2 -translate-y-1/2">
+  <div class="absolute  ">
     <button
       type="button"
       :aria-label="text"

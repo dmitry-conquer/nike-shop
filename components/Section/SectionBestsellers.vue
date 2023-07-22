@@ -1,9 +1,9 @@
 <template>
   <section class="container mb-40">
-    <div class="relative mx-auto mb-20 max-w-[38rem] text-center text-4xl font-bold uppercase leading-normal">
+    <div class="relative mx-auto mb-12 max-w-[38rem] text-center text-4xl font-bold uppercase leading-normal">
       <h2
         data-text="BEST SELLERS"
-        class="text-clip-sm text-clip text-white">
+        class="text-clip-sm text-2xl sm:text-3xl lg:text-4xl text-clip text-white leading-tight">
         BEST SELLERS
       </h2>
     </div>
@@ -35,23 +35,24 @@
 
 <script setup>
 onMounted(() => {
-  const gsap = useGsap();
+  const {gsap} = useGsap();
 
   const textStroke = gsap.timeline({
     scrollTrigger: {
       trigger: ".text-stroke",
-      start: "top bottom",
-      end: "bottom 40%",
+      start: "top 70%",
+      end: "bottom 20%",
       scrub: true,
     },
   });
   textStroke.fromTo(
     ".text-stroke",
     {
-      x: 100,
+      x: 300,
     },
     {
       x: 0,
+      stagger: 0.3
     },
   );
 });

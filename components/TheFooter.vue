@@ -1,27 +1,29 @@
 <template>
-  <footer class="container pt-20">
-    <div class="mb-20 flex gap-[8rem]">
-      <div class="w-[30rem]">
-        <h2 class="mb-8 whitespace-nowrap text-3xl leading-none">Let’s stay in touch</h2>
-        <form
-          @submit.prevent=""
-          class="mb-[5.5rem] flex h-14 w-[25rem] overflow-hidden rounded-3xl border">
-          <input
-            type="text"
-            placeholder="Enter email..."
-            class="h-full w-full bg-transparent px-6 text-center font-light text-white placeholder:text-base text-md focus:border-0 focus:outline-none" />
-          <button
-            type="submit"
-            class="grid place-content-center rounded-3xl bg-white px-10 font-light text-black">
-            Subscribe
-          </button>
-        </form>
+  <footer class="container pt-20 px-4">
+    <div class="mb-20 flex flex-col xl:flex-row xl:gap-[8rem] gap-16">
+      <div class="xl:w-[30rem] flex xl:flex-col items-center md:flex-row flex-col xl:gap-x-12 justify-between w-full">
+        <div>
+          <h2 class="mb-8 sm:whitespace-nowrap text-2xl sm:text-left text-center sm:text-3xl leading-none">Let’s stay in touch</h2>
+          <form
+            @submit.prevent=""
+            class="mb-[5.5rem] flex h-14 w-full sm:w-[25rem]  overflow-hidden rounded-3xl border">
+            <input
+              type="text"
+              placeholder="Enter email..."
+              class="h-full w-full bg-transparent px-6 text-center font-light text-white placeholder:text-base text-md focus:border-0 focus:outline-none" />
+            <button
+              type="submit"
+              class="grid place-content-center rounded-3xl bg-white px-10 font-light text-black">
+              Subscribe
+            </button>
+          </form>
+        </div>
         <img
           src="images/logo-full.png"
-          alt="logo-full" />
+          alt="logo-full" class="md:self-start max-sm:w-[60%]"/>
       </div>
       <nav class="flex-1">
-        <ul class="grid grid-cols-3 grid-rows-2 justify-between gap-x-16 gap-y-12 [&>*:nth-child(3)]:row-span-2">
+        <ul class="grid md:grid-cols-3 grid-cols-1 sm:grid-cols-2 md:grid-rows-2 justify-between gap-8 md:gap-x-16 md:gap-y-12 md:[&>*:nth-child(3)]:row-span-2">
           <li
             v-for="item in navigation"
             :key="item.title"
@@ -43,9 +45,8 @@
         </ul>
       </nav>
     </div>
-
     <!-- bottom -->
-    <div class="flex items-center justify-between gap-4 py-4">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4">
       <p class="font-light">2022 Nike, Inc. All Rights Reserved ©</p>
       <ul class="flex items-center gap-x-10">
         <li

@@ -1,55 +1,57 @@
 <template>
   <section
-    class="relative mx-auto flex max-w-[2000px] items-center justify-center gap-24 overflow-hidden py-40 pl-16 pr-12">
+    class="relative mx-auto flex max-w-[2000px] flex-col items-center justify-center gap-32 overflow-hidden px-4 py-40 max-md:py-20 md:flex-row md:pr-12 lg:pl-8 xl:pl-16">
     <h1 class="sr-only">Nike Shop</h1>
     <img
       src="images/vector1.png"
       alt="vector"
-      class="pointer-events-none absolute left-0 top-0 h-full w-full" />
+      class="pointer-events-none absolute left-0 top-0 h-full w-full max-sm:hidden" />
     <p
       id="hero-bg-text"
-      class="pointer-events-none absolute left-0 top-1/4 bg-gradient-to-b from-white/10 to-white/0 bg-clip-text text-6xl font-[950] uppercase leading-none text-transparent">
+      class="pointer-events-none absolute left-0 top-1/4 bg-gradient-to-b from-white/10 to-white/0 bg-clip-text text-center text-4xl font-[950] uppercase leading-none text-transparent md:text-5xl xl:text-6xl">
       AIR JORDAN 1 RETRO HIGH OG DUNK HIGH
     </p>
-    <div class="absolute -left-[55%] top-1/2 z-30 -translate-y-1/2 translate-x-full">
+    <div
+      class="absolute -left-[49rem] top-[20%] z-50 -translate-y-1/2 translate-x-full max-sm:-left-[28rem] md:top-1/2 lg:-left-[65rem]">
       <div
         ref="colorscircle"
-        class="h-[40rem] w-[40rem] rounded-full border transition duration-500">
+        class="h-[20rem] w-[20rem] rounded-full border transition duration-500 sm:h-[30rem] sm:w-[30rem] lg:h-[40rem] lg:w-[40rem]">
         <button
           v-for="(s, i) in sneakers"
           :key="s.name"
           @click="choose(s.name, i)"
           type="button"
           :class="[s.position, s.color, { 'border-2': s.name === currentColor }]"
-          class="absolute block h-4 w-4 -translate-y-1/2 translate-x-1/2 rounded-full"></button>
+          class="absolute h-4 w-4 -translate-y-1/2 translate-x-1/2 rounded-full"></button>
       </div>
     </div>
     <div
       id="cross-selector"
       ref="cross"
-      class="relative z-20 h-[20rem] w-[40rem]">
+      class="relative -left-24 top-1/2 z-20 w-[18rem] shrink-0 sm:left-0 sm:h-[60%] sm:w-[60%] md:h-[8rem] md:w-[24rem] md:-translate-y-1/2 lg:h-[12rem] lg:w-[32rem] xl:h-[20rem] xl:w-[40rem]">
       <Transition
+        mode="out-in"
         v-for="(url, i) in sliderImagesUrl"
         :key="i">
         <img
           v-show="currentCross == i"
           :src="url"
           alt="nike cross"
-          class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 -rotate-[15.537deg] object-contain" />
+          class="absolute w-full -rotate-[15.537deg] object-contain" />
       </Transition>
       <ToolTips
         text="Purposeful Design"
         position="top-left"
-        class="left-1/2 top-1/2" />
+        class="left-1/4 top-12 z-10 sm:top-24 md:top-16 lg:top-48" />
       <ToolTips
         text="Relentless Innovation"
         position="top-left"
-        class="left-[85%] top-[15%]" />
+        class="left-[85%] z-10" />
     </div>
-    <div class="w-3/7">
+    <div class="md:w-3/7 mt-24">
       <h2 class="sr-only">New collection</h2>
-      <div class="flex flex-col items-start gap-y-4">
-        <h3 class="text-3xl italic leading-none">AIR JORDAN 1 RETRO HIGH OG</h3>
+      <div class="flex flex-col items-start gap-y-4 px-4 max-md:max-w-md">
+        <h3 class="text-2xl italic leading-none md:text-3xl">AIR JORDAN 1 RETRO HIGH OG</h3>
         <div class="flex w-full">
           <span class="mr-auto text-2xl">$275</span>
           <div class="mr-16 flex items-center gap-2">
@@ -63,12 +65,6 @@
             </select>
           </div>
         </div>
-        <a
-          href="#"
-          class="inline-flex items-center gap-3 rounded-3xl border px-4 py-1.5 font-light leading-none">
-          <span>More Details</span>
-          <IconArrowSimple class="h-4 w-4 fill-white" />
-        </a>
       </div>
     </div>
   </section>
@@ -107,7 +103,7 @@ const sneakers = [
   {
     name: "purple",
     color: "bg-[#492e8e]",
-    position: "right-[22%] bottom-[6%]",
+    position: "right-[22%] bottom-[5.5%]",
   },
 ];
 
@@ -140,7 +136,7 @@ const choose = (color, i) => {
  */
 
 onMounted(() => {
-  const gsap = useGsap();
+  const { gsap } = useGsap();
 
   const heroBgText = gsap.timeline({
     scrollTrigger: {
@@ -154,6 +150,7 @@ onMounted(() => {
     yPercent: -100,
     opacity: 1,
   });
+
   const crossSelector = gsap.timeline({
     scrollTrigger: {
       trigger: "#cross-selector",

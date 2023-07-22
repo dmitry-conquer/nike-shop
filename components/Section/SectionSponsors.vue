@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-32 flex justify-center gap-20">
+  <section class="mb-32 flex justify-center flex-wrap gap-x-16 gap-y-12 px-4">
     <img
       v-for="s in sponsors"
       :key="s"
@@ -22,13 +22,13 @@ const sponsors = [
 ];
 
 onMounted(() => {
-  const gsap = useGsap();
+  const {gsap} = useGsap();
 
   const sponsor = gsap.timeline({
     scrollTrigger: {
       trigger: ".sponsor",
-      start: "top bottom",
-      end: "bottom top",
+      start: "top 80%",
+      end: "bottom 20%",
       scrub: true,
     },
   });

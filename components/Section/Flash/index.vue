@@ -19,12 +19,13 @@
         </button>
       </div>
       <ClientOnly>
-        <div class="-mt-8 w-2/3 overflow-hidden pt-8">
+        <div class="-mt-8 w-2/3 overflow-hidden px-4 pt-8">
           <Swiper
             @swiper="onSwiper"
             :modules="[SwiperNavigation, SwiperAutoplay]"
             :slides-per-view="3"
             :speed="800"
+            :breakpoints="breakpointsOptions"
             :autoplay="{
               duration: 2000,
             }"
@@ -56,6 +57,19 @@
 const slider = ref(null);
 const onSwiper = swiper => {
   slider.value = swiper;
+};
+
+const breakpointsOptions = {
+  575: {},
+  768: {
+    slidesPerView: 2.3
+  },
+  1024: {
+   
+  },
+  1280: {
+    slidesPerView: 3
+  },
 };
 
 const items = [

@@ -7,7 +7,7 @@ export function useGsap() {
   gsap.registerPlugin(ScrollTrigger);
 
   const lenis = new Lenis({
-    duration: 3,
+    duration: 2,
   });
   lenis.on("scroll", e => {});
   function raf(time) {
@@ -16,13 +16,11 @@ export function useGsap() {
   }
   requestAnimationFrame(raf);
 
-
-
   lenis.on("scroll", ScrollTrigger.update);
   gsap.ticker.add(time => {
     lenis.raf(time * 1000);
   });
   gsap.ticker.lagSmoothing(0);
 
-  return gsap;
+  return { gsap, ScrollTrigger };
 }
