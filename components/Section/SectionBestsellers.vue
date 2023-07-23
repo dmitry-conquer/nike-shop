@@ -10,21 +10,21 @@
     <div class="grid grid-cols-1 justify-center justify-items-center gap-10 md:grid-cols-2 lg:grid-cols-3">
       <div class="relative overflow-hidden max-sm:w-[80%]">
         <img
-          src="~/assets/images/women.jpg"
+          src="~/assets/images/converted/women.webp"
           alt="women"
           class="relative -z-0" />
         <h3 class="text-stroke absolute bottom-2 right-2 text-4xl uppercase italic leading-none">women</h3>
       </div>
       <div class="relative overflow-hidden max-sm:w-[80%]">
         <img
-          src="~/assets/images/kids.jpg"
+          src="~/assets/images/converted/kids.webp"
           alt="kids"
           class="relative -z-0" />
         <h3 class="text-stroke absolute bottom-2 right-2 text-4xl uppercase italic leading-none">kids</h3>
       </div>
       <div class="relative overflow-hidden max-sm:w-[80%]">
         <img
-          src="~/assets/images/men.jpg"
+          src="~/assets/images/converted/men.webp"
           alt="men"
           class="relative -z-0" />
         <h3 class="text-stroke absolute bottom-2 right-2 text-4xl uppercase italic leading-none">men</h3>

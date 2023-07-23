@@ -30,10 +30,10 @@
 </template>
 
 <script setup>
-import cross11 from "~/assets/images/cross11.png";
-import cross9 from "~/assets/images/cross9.png";
-import cross8 from "~/assets/images/cross8.png";
-import cross7 from "~/assets/images/cross7.png";
+import cross11 from "~/assets/images/converted/cross11.webp";
+import cross9 from "~/assets/images/converted/cross9.webp";
+import cross8 from "~/assets/images/converted/cross8.webp";
+import cross7 from "~/assets/images/converted/cross7.webp";
 
 
 const items = [

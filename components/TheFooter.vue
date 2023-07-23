@@ -34,17 +34,17 @@
             class="text-xl italic">
             <div
               @click="toggleSpoiler"
-              class="flex items-center gap-3">
+              class="flex items-center gap-3 max-sm:cursor-pointer">
               <h3 class="pointer-events-none whitespace-nowrap text-md font-light sm:text-xl">
                 {{ item.title }}
               </h3>
-              <IconArrowOnly class="pointer-events-none h-3 w-3 -rotate-90 transition" />
+              <IconArrowOnly class="pointer-events-none h-3 w-3 -rotate-90 transition sm:hidden" />
             </div>
-            <ul class="max-h-0 space-y-4 overflow-hidden transition-all">
+            <ul class="space-y-4 transition-all max-sm:max-h-0 max-sm:overflow-hidden">
               <li
                 v-for="link in item.items"
                 :key="link"
-                class="leading-none  first:mt-4">
+                class="leading-none first:mt-4">
                 <a
                   href="#"
                   class="sm:text-medium block text-base font-light not-italic transition duration-200 hover:translate-x-2 hover:text-brand-500"
@@ -64,8 +64,9 @@
           :key="i">
           <a
             href="#"
-            class="transition-transform hover:scale-125">
-            <component :is="s" />
+            class="transition-transform hover:scale-125"
+            :aria-label="`link ${s.name}`">
+            <component :is="s.icon" />
           </a>
         </li>
       </ul>
@@ -81,12 +82,29 @@ import IconInstagram from "~/components/Icon/IconInstagram.vue";
 
 const toggleSpoiler = e => {
   const list = e.target.nextElementSibling;
-  const lastChild = e.target.lastChild
-  lastChild.style.transform = lastChild.style.transform ? null : 'rotate(180deg)'
+  const lastChild = e.target.lastChild;
+  lastChild.style.transform = lastChild.style.transform ? null : "rotate(180deg)";
   list.style.maxHeight = list.style.maxHeight ? null : `${list.scrollHeight}px`;
 };
 
-const socials = [IconYoutube, IconFacebook, IconTwitter, IconInstagram];
+const socials = [
+  {
+    name: "Youtube",
+    icon: IconYoutube,
+  },
+  {
+    name: "Facebook",
+    icon: IconFacebook,
+  },
+  {
+    name: "Twitter",
+    icon: IconTwitter,
+  },
+  {
+    name: "Instagram",
+    icon: IconInstagram,
+  },
+];
 const navigation = [
   {
     title: "SHOP  ",

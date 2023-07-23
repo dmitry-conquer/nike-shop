@@ -1,6 +1,6 @@
 <template>
   <img
-    src="~/assets/images/vector-sections.png"
+    src="~/assets/images/converted/vector-sections.webp"
     alt="vector-sections"
     class="absolute left-0 top-[200vh] pointer-events-none" />
   <SectionHero />

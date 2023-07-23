@@ -54,12 +54,12 @@
 </template>
 
 <script setup>
-import cross1 from "~/assets/images/cross1.png";
-import cross2 from "~/assets/images/cross2.png";
-import cross3 from "~/assets/images/cross3.png";
-import cross4 from "~/assets/images/cross4.png";
-import cross5 from "~/assets/images/cross5.png";
-import cross6 from "~/assets/images/cross6.png";
+import cross1 from "~/assets/images/converted/cross1.webp";
+import cross2 from "~/assets/images/converted/cross2.webp";
+import cross3 from "~/assets/images/converted/cross3.webp";
+import cross4 from "~/assets/images/converted/cross4.webp";
+import cross5 from "~/assets/images/converted/cross5.webp";
+import cross6 from "~/assets/images/converted/cross6.webp";
 
 const slider = ref(null);
 const onSwiper = swiper => {

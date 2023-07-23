@@ -9,12 +9,12 @@
         </h2>
         <img
           id="thumb-1"
-          src="~/assets/images/title-thumb1.jpg"
+          src="~/assets/images/converted/title-thumb1.webp"
           alt="title-thumb1"
           class="absolute max-sm:hidden top-0 right-0 h-[4.5rem] w-[4.5rem]" />
         <img
           id="thumb-2"
-          src="~/assets/images/title-thumb2.jpg"
+          src="~/assets/images/converted/title-thumb2.webp"
           alt="title-thumb2"
           class="absolute max-sm:hidden bottom-0 left-0 h-[4.5rem] w-[4.5rem]" />
       </div>
@@ -29,7 +29,7 @@
     <img
       id="red-cross"
       class="will-change-transform absolute sm:-bottom-[20%] -bottom-[13%] -left-[14%] -z-10 w-[60%] rotate-[35deg] object-contain xl:h-[20rem] xl:w-[42rem]"
-      src="~/assets/images/cross-red.png"
+      src="~/assets/images/converted/cross-red.webp"
       alt="cross-red" />
   </section>
 </template>

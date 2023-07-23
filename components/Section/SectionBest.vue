@@ -12,23 +12,23 @@
         id="image-big"
         class="relative z-20 row-span-3 overflow-hidden rounded-2xl sm:pb-16 will-change-transform">
         <img
-          src="~/assets/images/best1.jpg"
+          src="~/assets/images/converted/best1.webp"
           alt="image"
           class="h-full w-full overflow-hidden rounded-2xl object-cover" />
       </div>
       <div
         id="image-small"
-        class="relative z-20 overflow-hidden rounded-2xl will-change-transform">
+        class="will-change-transform relative z-20 overflow-hidden rounded-2xl">
         <img
-          src="~/assets/images/best2.jpg"
+          src="~/assets/images/converted/best2.webp"
           alt="image"
-          class="col-end-3 h-full w-full object-cover" />
+          class=" col-end-3 h-full w-full object-cover" />
       </div>
       <div
         id="image-medium"
         class="relative z-20 row-span-2 overflow-hidden rounded-2xl sm:pl-12 sm:pr-4 will-change-transform">
         <img
-          src="~/assets/images/best3.jpg"
+          src="~/assets/images/converted/best3.webp"
           alt="image"
           class="h-full w-full rounded-2xl object-cover" />
       </div>

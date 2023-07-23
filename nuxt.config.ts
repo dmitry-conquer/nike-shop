@@ -5,18 +5,15 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
       title: "Nike",
       meta: [
-        { name: "description", content: "Dream Team web site." },
-        { name: "keywords", content: "Dream, Team, site" },
-        { name: "robots", content: "noindex, nofollow" },
         { name: "language", content: "English" },
+        { name: "description", content: "Nike landing page." },
+        { name: "keywords", content: "Nike, landing, page, parallax" },
+        { name: "robots", content: "noindex, nofollow" },
         { name: "author", content: "Dmitry Conquer" },
       ],
     },
   },
-  // runtimeConfig: {
-  //   SUPABASE_KEY: process.env.SUPABASE_KEY,
-  //   SUPABASE_URL: process.env.SUPABASE_URL,
-  // },
+
   spaLoadingTemplate: false,
   devtools: { enabled: false },
   modules: ["@nuxtjs/tailwindcss", "nuxt-swiper"],

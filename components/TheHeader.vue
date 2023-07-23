@@ -1,6 +1,6 @@
 <template>
   <header class="flex min-h-[5rem] items-center justify-center relative z-20">
-    <a href="#" class="">
+    <a href="#" class="" aria-label="nike logo">
       <IconNikeSimple class="h-[4rem] w-[8rem] fill-white" />
     </a>
   </header>

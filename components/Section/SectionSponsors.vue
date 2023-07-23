@@ -5,19 +5,19 @@
       :key="s"
       :src="s"
       :alt="s"
-      class="sponsor aspect-video object-contain" />
+      class="sponsor will-change-transform aspect-video object-contain" />
   </section>
 </template>
 
 <script setup>
-import spon1 from "~/assets/images/sponsores/spon1.png";
-import spon2 from "~/assets/images/sponsores/spon2.png";
-import spon3 from "~/assets/images/sponsores/spon3.png";
-import spon4 from "~/assets/images/sponsores/spon4.png";
-import spon5 from "~/assets/images/sponsores/spon5.png";
-import spon6 from "~/assets/images/sponsores/spon6.png";
-import spon7 from "~/assets/images/sponsores/spon7.png";
-import spon8 from "~/assets/images/sponsores/spon8.png";
+import spon1 from "~/assets/images/converted/sponsores/spon1.webp";
+import spon2 from "~/assets/images/converted/sponsores/spon2.webp";
+import spon3 from "~/assets/images/converted/sponsores/spon3.webp";
+import spon4 from "~/assets/images/converted/sponsores/spon4.webp";
+import spon5 from "~/assets/images/converted/sponsores/spon5.webp";
+import spon6 from "~/assets/images/converted/sponsores/spon6.webp";
+import spon7 from "~/assets/images/converted/sponsores/spon7.webp";
+import spon8 from "~/assets/images/converted/sponsores/spon8.webp";
 
 const sponsors = [spon1, spon2, spon3, spon4, spon5, spon6, spon7, spon8];
 

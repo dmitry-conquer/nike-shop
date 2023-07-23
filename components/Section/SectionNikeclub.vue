@@ -12,9 +12,9 @@
     </div>
     <img
       id="black-cross"
-      src="~/assets/images/cross-black.png"
+      src="~/assets/images/converted/cross-black.webp"
       alt="cross-black"
-      class="absolute lg:w-[70%] sm:w-[35rem] sm:-right-[35%] -right-[15%]  top-[80%] sm:top-1/2 lg:top-[25%]" />
+      class="will-change-transform absolute lg:w-[70%] sm:w-[35rem] sm:-right-[35%] -right-[15%]  top-[80%] sm:top-1/2 lg:top-[25%]" />
   </section>
 </template>
 
